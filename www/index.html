@@ -1,0 +1,40 @@
+<html>
+<head>
+    <center><font color="white"> <h1>LOP CALCULATOR</h1></font></center>
+<script>
+    function calculate() {
+        var gsa=document.getElementById("gsal").value
+        var Mday=document.getElementById("Mdate").value
+        var lbal=document.getElementById("bal").value
+        var Dabsent=document.getElementById("absent").value
+        var ad=document.getElementById("advance").value
+        var lopcal=(gsa/Mday)*Dabsent
+        var tot=((gsa-lopcal)-ad)
+        document.getElementById("lop").value=lopcal
+        document.getElementById("netsal").value=tot
+
+
+    }
+</script>
+</head>
+<body bgcolor="#2f4f4f">
+<font color="white" size="5">
+    <b>
+<form>
+    Gross Salary:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="gross_sal" id="gsal"><br><br>
+    No:of Days in Month: &nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="Mdate" id="Mdate"><br><br>
+    Leave Balance: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="bal" id="bal"><br><br>
+    No:of Days Absent: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="absent" id="absent"><br><br>
+    Advance: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="advance" id="advance"><br><br>
+    LOP: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="lop" id="lop" disabled><br><br>
+    Net Salary: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="netsal" id="netsal" disabled><br><br><br>
+   <input type="button" name="cal" id="cal" value="Calculate" onclick="calculate()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="submit" name="reset" id="reset" value="Reset">
+
+</form>
+    </b>
+</font>
+
+
+</body>
+</html>
